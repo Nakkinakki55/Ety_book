@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta http-equiv="content-type" charset="UTF-8">
+    <title>使い方</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/common.css?ver=1.0.2' />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.0/js/jquery.tablesorter.min.js"></script>
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+</head>
+
+<body class="pt-5">
+    <%- include('partials/header') %>
+        <div class="container pt-5 bg-light">
+            <h2 class="bg-purpule text-white p-2">Ety-bookとは?</h2>
+            <p class="pt-3">「Ety-book(エティーブック)」とは、語源を用いて英単語を最短最速で覚えることをコンセプトに作られたアプリケーションです。英語のみならず語学を勉強している人にとって、単語を覚える作業は</p>
+            <ul>
+                <li>
+                    <p class="h3 fw-bold">面倒くさい</p>
+                </li>
+                <li>
+                    <p class="h3 fw-bold">すぐに忘れてしまう</p>
+                </li>
+                <li>
+                    <p class="h3 fw-bold">効率的に覚えたい</p>
+                </li>
+            </ul>
+
+            <p>と悩んでいる学習者たちを救うアプリなのです！</p>
+
+            <h3 class="bg-purpule text-white p-2 mt-5">単語と語源を登録する方法</h3>
+            <h4 class="pt-3"><i class="bi bi-check-circle-fill"></i> 単語の登録方法</h4>
+            <ol class="pt-2">
+                <li>
+                    <p><i class="h6 bi bi-pencil-square"></i> ボタンをタップすると単語登録画面に移ります。登録したい単語や意味を入力します。</p>
+                    <div class="row">
+                        <div class="col-5">
+                            <img src="/images/how_to_use/how_to_use-01.png" class="img-fluid">
+                        </div>
+                        <div class="col-2">
+                            <img src="/images/how_to_use/arrow.png" class="img-fluid">
+                        </div>
+                        <div class="col-5">
+                            <img src="/images/how_to_use/how_to_use-02.png" class="img-fluid">
+                        </div>
+                    </div>
+                </li>
+                <br><br>
+                <li>
+                    <p>単語と関連する語源を入力します。<b>未登録の語源は単語が登録された後に自動的に登録されます。登録済みの語源は次回以降、入力候補として上がります。</b>なお語源の調べ方は<a href="/introduction_faq"><b> 語源の調べ方 </b></a>をご参考ください。</p>
+                    <div class="row">
+                        <div class="col-5">
+                            <img src="/images/how_to_use/how_to_use-03.png" class="img-fluid">
+                        </div>
+                    </div>
+                </li>
+                <br><br>
+                <li>
+                    <p>語源の意味を入力します。<b>未登録の語源の意味は単語が登録された後に自動的に登録されます。登録済みの語源の意味は語源の入力欄から離れた瞬間に自動補完されます。</b></p>
+                    <div class="row">
+                        <div class="col-5">
+                            <img src="/images/how_to_use/how_to_use-04.png" class="img-fluid">
+                        </div>
+                    </div>
+                </li>
+                <br><br>
+                <li>
+                    <p>関連語、例文、メモを入力します。<b>その単語が出たシチュエーションや、自分の知識と関連することを記入すれば記憶の定着率が上がります。[1]</b></p>
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="/images/how_to_use/how_to_use-05.png" class="img-fluid">
+                        </div>
+                        <div class="col-4">
+                            <img src="/images/how_to_use/how_to_use-06.png" class="img-fluid">
+                        </div>
+                        <div class="col-4">
+                            <img src="/images/how_to_use/how_to_use-07.png" class="img-fluid">
+                        </div>
+                    </div>
+                </li>
+                <br><br>
+                <li>
+                    <p>入力が完了した場合、<i class="bi bi-upload"></i> ボタンをタップすると単語と未登録の語源が登録されます。</p>
+                    <div class="row">
+                        <div class="col-5">
+                            <img src="/images/how_to_use/how_to_use-08.png" class="img-fluid">
+                        </div>
+                    </div>
+
+                </li>
+                <br><br>
+                <li>
+                    <p>単語の登録完了後に同じ語源の単語を登録する機能もありますので、ぜひお使いください。<b>同じ語源で、なおかつ知っている単語をいくつか登録するを行えば通常の記憶作業に比べて定着率が高いです。加えて上記のように関連付けした単語を繰り返し確認すると、通常の記憶作業に比べて 定着率が高いです。[2]</b></p>
+                    <div class="row">
+                        <div class="col-5">
+                            <img src="/images/how_to_use/how_to_use-09.png" class="img-fluid">
+                        </div>
+                    </div>
+                </li>
+            </ol>
+
+            <h4 class="pt-4"><i class="bi bi-check-circle-fill"></i> 語源の登録方法</h4>
+            <p class="pt-2">基本的には方法が2つあります。なお語源の調べ方は<a href="/introduction_faq"><b> 語源の調べ方 </b></a>をご参考ください。</p>
+            <ul>
+                <li>
+                    <p>単語の情報を入力する際に未登録の語源を入力して、登録すると自動的に入力されます。詳しくは<b class="bg-purpule text-white">単語と語源を登録する方法</b>の2.と3.をご覧ください。</p>
+                </li>
+                <br>
+                <li>
+                    <p>単語を登録する前に語源を登録したい場合は画面右上の<i class="bi bi-list-task"></i> ボタンをタップしてください。そこから[語源登録]を選択してください。語源の入力完了後は、<i class="bi bi-upload"></i> ボタンをタップしてください。</p>
+                    <div class="row">
+                        <div class="col-5">
+                            <img src="/images/how_to_use/how_to_use-10.png" class="img-fluid">
+                        </div>
+                        <div class="col-2">
+                            <img src="/images/how_to_use/arrow.png" class="img-fluid">
+                        </div>
+                        <div class="col-5">
+                            <img src="/images/how_to_use/how_to_use-11.png" class="img-fluid">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <h3 class="bg-purpule text-white p-2 mt-5">同じ語源を持つ単語を追加する方法</h3>
+            <ol class="pt-2">
+                <li>
+                    <p><i class="h6 bi bi-house-door-fill"></i> ボタンをタップするとホーム画面に移ります。そこから語源を選択してください。</p>
+                    <div class="row">
+                        <div class="col-5">
+                            <img src="/images/how_to_use/how_to_use-12.png" class="img-fluid">
+                        </div>
+                    </div>
+                </li>
+                <br><br>
+                <li>
+                    <p>+ ボタンをタップすると単語登録画面に移りますので、単語を追加してみてください。</p>
+                    <div class="row">
+                        <div class="col-5">
+                            <img src="/images/how_to_use/how_to_use-13.png" class="img-fluid">
+                        </div>
+                    </div>
+                </li>
+
+            </ol>
+            <h3 class="bg-purpule text-white p-2 mt-5">単語と語源を更新する方法</h3>
+            <h4 class="pt-3"><i class="bi bi-check-circle-fill"></i> 単語の更新方法</h4>
+            <ol class="pt-2">
+                <li>
+                    <p><i class="h6 bi bi-house-door-fill"></i> ボタンをタップするとホーム画面に移ります。そこで更新したい単語を選択してください。</p>
+                    <div class="row">
+                        <div class="col-5">
+                            <img src="/images/how_to_use/how_to_use-14.png" class="img-fluid">
+                        </div>
+                    </div>
+                </li>
+                <br><br>
+                <li>
+                    <p>単語表示画面の上と最下部にある<i class="h6 bi bi-pencil-square"></i> ボタンをタップしてください。単語更新画面に移行します。</p>
+                    <div class="row">
+                        <div class="col-5">
+                            <img src="/images/how_to_use/how_to_use-15.png" class="img-fluid">
+                        </div>
+                        <div class="col-5">
+                            <img src="/images/how_to_use/how_to_use-16.png" class="img-fluid">
+                        </div>
+                    </div>
+                </li>
+                <br><br>
+                <li>
+                    <p>入力内容の変更後、<i class="bi bi-upload"></i> ボタンをタップすると更新されます。</p>
+                    <div class="row">
+                        <div class="col-5">
+                            <img src="/images/how_to_use/how_to_use-08.png" class="img-fluid">
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            <h4 class="pt-3"><i class="bi bi-check-circle-fill"></i> 語源の更新方法</h4>
+            <ol class="pt-2">
+                <li>
+                    <p><i class="h6 bi bi-house-door-fill"></i> ボタンをタップするとホーム画面に移ります。そこで更新したい語源を選択してください。</p>
+                    <div class="row">
+                        <div class="col-5">
+                            <img src="/images/how_to_use/how_to_use-12.png" class="img-fluid">
+                        </div>
+                    </div>
+                </li>
+                <br><br>
+                <li>
+                    <p>残りの手順は<i class="bi bi-check-circle-fill"></i><b> 単語の更新方法</b>とほぼ同じです。</p>
+                </li>
+            </ol>
+            <h3 class="bg-purpule text-white p-2 mt-5">単語と語源を閲覧する方法</h3>
+            <ul>
+                <li>
+                    <p><i class="h6 bi bi-house-door-fill"></i> ボタンをタップしてください。</p>
+                    <div class="row">
+                        <div class="col-5">
+                            <img src="/images/how_to_use/how_to_use-17.png" class="img-fluid">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <h3 class="bg-purpule text-white p-2 mt-5">登録した単語や語源を検索する方法</h3>
+            <ul>
+                <li>
+                    <p>単語を登録する前に語源を登録したい場合は画面右上の<i class="bi bi-list-task"></i> ボタンをタップしてください。そこから[単語・語源検索]を選択してください。単語や語源を検索してみてください。</p>
+                    <div class="row">
+                        <div class="col-5">
+                            <img src="/images/how_to_use/how_to_use-18.png" class="img-fluid">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <h5 class="bg-purpule text-white p-2 mt-5">参考文献</h5>
+            <ol>
+                <li>
+                    <p>Craik, F.I.M., & Lockhart, R.S. (1972). Levels of processing. A framework for memory research. Journal of Verbal Learning and Verbal Behaviour, 11, 671-684.</p>
+                </li>
+                <li>
+                    <p>高橋雅延, (1989). 記憶における自己選択効果. 京都大学教育学部 紀要, 35, 207-217.</p>
+                </li>
+            </ol>
+            <br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+        </div>
+        <%- include('partials/footer') %>

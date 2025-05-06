@@ -1,0 +1,26 @@
+<div class="container text-center pt-5" style="max-width: 450px;">
+
+    <form method="POST" action="/search">
+
+        <div class="input-group">
+            <select class="form-select border border-dark border-1" name="typeWordOrEtymology" aria-label="Example select with button addon">
+            <option value="単語" <%= locals.wordSelected ? wordSelected :null%>>単語</option>
+            <option value="語源" <%= locals.etymologySelected ? etymologySelected :null%>>語源</option>
+        </select>
+            <select class="form-select  border border-dark border-1" name="partialMatchExactMatch" aria-label="Example select with button addon">
+            <option value="部分一致" <%= locals.partialMatch ? partialMatch :null%>>部分一致</option>
+            <option value="完全一致" <%= locals.ExactMatch ? ExactMatch :null%>>完全一致</option>
+            
+          </select>
+        </div>
+
+        <div class="input-group pt-3">
+            <input type="text" name="wordOrEtymology" class="form-control input-group-prepend border border-dark border-1" value="<%= locals.sendWordOrEtymology ? sendWordOrEtymology :null%>" placeholder="検索" required></input>
+        </div>
+
+        <div class="row pt-4">
+            <div class="col text-center">
+                <button type="submit" class="btn btn-secondary btnx-purpule col-5 bi bi-icon-2 bi-search col" style="color: white;"></button>
+    </form>
+    </div>
+    </div>

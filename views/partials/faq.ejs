@@ -1,0 +1,55 @@
+<!-- ======= よくあるQ&A Section ======= -->
+<section id="faq" class="faq section-bg">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>よくあるQ&A</h2>
+        </div>
+
+        <div class="accordion-list">
+            <ul>
+                <li>
+                    <i class="bx bx-help-circle icon-help"></i>
+                    <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1">語源はどのように調べればよろしいでしょうか？<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                    <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                        <p>
+                            <span>基本的に自分で調べて登録することを勧めています。</span>Googleで「〇〇〇（英単語名）　語源」で調べたり、もし日本語の文献が出てこない場合は「〇〇〇（英単語名）　etymology」と英語の文献を使うことをおすすめしています。
+                            <br>以上の作業はやや面倒だと思いますが、自分で情報を選択する方が記憶への <span>定着率が高いです。</span>[
+                            <%= locals.referNum ? referNum :null%>]</p>
+                    </div>
+                </li>
+
+                <li>
+                    <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed">語源を調べるお勧めサイトはありますか？<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                    <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                        <br>
+                        <a class="text-decoration-underline" href="http://gogengo.me/">Gogengo! (ゴゲンゴ) - 英単語は語源でたのしく</a><br><br>
+                        <a class="text-decoration-underline" href="https://eigogen.com/">語源から学ぶ英単語　~ 英・語・源 ~</a><br><br>
+                        <a class="text-decoration-underline" href="https://www.etymonline.com/">Online Etymology Dictionary | Origin, history and meaning of English words</a><br><br>
+                    </div>
+                </li>
+
+                <li>
+                    <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed">同じ語源がない単語はどのよろしいでしょうか？<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                    <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                        <p>
+                            単語を登録する際の「メモ」機能をお使いください。その単語が出たシチュエーションや、自分の知識と関連することを記入すれば記憶の<span>定着率が上がります。</span>[
+                            <%= locals.referNum ? referNum :null%>]
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-4" class="collapsed">気を付けなければいけない単語はありますか？<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                    <div id="accordion-list-4" class="collapse" data-bs-parent=".accordion-list">
+                        <p>
+                            他の言語の単語をそのまま使用している例があります。例えば動物のOrangutan(オラウータン)はマレー語由来、panda(パンダ)はネパール語由来と言われています。
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+<!-- End よくあるQ&A Section -->

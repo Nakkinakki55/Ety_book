@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta http-equiv="content-type" charset="UTF-8">
+    <title>Ety-Book</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/common.css?ver=1.0.2' />
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+</head>
+
+<body class="pt-5">
+    <%- include('partials/header') %>
+        <div class="container pt-5">
+            <form method="POST" action="<%= locals.action ? action :null%>">
+
+                <h4 class="bg-dark text-white text-center p-2">語源</h4>
+                <input type="hidden" name="id" value="<%= locals.id ? id :null%>" class="form-control text-center border border-dark border-1">
+                <input type="hidden" name="original_etymology" value="<%= locals.original_etymology ? original_etymology :null%>" class="form-control text-center border border-dark border-1">
+                <input type="text" name="etymology" value="<%= locals.etymology ? etymology :null%>" class="form-control text-center border border-dark border-1" maxlength="100" pattern=".*[^\s]+.*">
+                <label id="error-message" class="text-center text-danger" style="display: none;">
+                </label>
+                <h4 class="bg-dark text-white text-center p-2 mt-5">意味</h4>
+                <input type="text" name="etymology_mean" value="<%= locals.etymology_mean ? etymology_mean :null%>" class="form-control text-center border border-dark border-1" maxlength="100">
+                <a class="text-left pt-2" href="/introduction_faq">語源の調べ方</a>
+                <h4 class="bg-dark text-white text-center p-2 mt-5">関連語</h4>
+                <table class="table table-borderless">
+                    <tbody>
+                        <tr>
+                            <td><input type="text" name="etymology_relatedWord01" value="<%= locals.etymology_relatedWord01 ? etymology_relatedWord01 :null%>" class="form-control border border-dark border-1" maxlength="100"></td>
+                            <td><input type="text" name="etymology_relatedWord02" value="<%= locals.etymology_relatedWord02 ? etymology_relatedWord02 :null%>" class="form-control border border-dark border-1" maxlength="100"> </td>
+                            <td><input type="text" name="etymology_relatedWord03" value="<%= locals.etymology_relatedWord03 ? etymology_relatedWord03 :null%>" class="form-control border border-dark border-1" maxlength="100"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="etymology_relatedWord04" value="<%= locals.etymology_relatedWord04 ? etymology_relatedWord04 :null%>" class="form-control border border-dark border-1" maxlength="100"></td>
+                            <td><input type="text" name="etymology_relatedWord05" value="<%= locals.etymology_relatedWord05 ? etymology_relatedWord05 :null%>" class="form-control border border-dark border-1" maxlength="100"></td>
+                            <td><input type="text" name="etymology_relatedWord06" value="<%= locals.etymology_relatedWord06 ? etymology_relatedWord06 :null%>" class="form-control border border-dark border-1" maxlength="100"></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="text" name="etymology_relatedWord07" value="<%= locals.etymology_relatedWord07 ? etymology_relatedWord07 :null%>" class="form-control border border-dark border-1" maxlength="100"></td>
+                            <td><input type="text" name="etymology_relatedWord08" value="<%= locals.etymology_relatedWord08 ? etymology_relatedWord08 :null%>" class="form-control border border-dark border-1" maxlength="100"></td>
+                            <td><input type="text" name="etymology_relatedWord09" value="<%= locals.etymology_relatedWord09 ? etymology_relatedWord09 :null%>" class="form-control border border-dark border-1" maxlength="100"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="etymology_relatedWord10" value="<%= locals.etymology_relatedWord10 ? etymology_relatedWord10 :null%>" class="form-control border border-dark border-1" maxlength="100"></td>
+                            <td><input type="text" name="etymology_relatedWord11" value="<%= locals.etymology_relatedWord11 ? etymology_relatedWord11 :null%>" class="form-control border border-dark border-1" maxlength="100"></td>
+                            <td><input type="text" name="etymology_relatedWord12" value="<%= locals.etymology_relatedWord12 ? etymology_relatedWord12 :null%>" class="form-control border border-dark border-1" maxlength="100"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4 class="bg-dark text-white text-center p-2 mt-5">メモ</h4>
+                <div class="form-row">
+                    <div class="form-group col-12">
+                        <textarea class="form-control border border-dark border-1" name="etymology_memo" rows="5" maxlength="3000"><%= locals.etymology_memo ? etymology_memo :null%></textarea>
+                    </div>
+                </div>
+
+
+                <div class="row mt-5 mb-5 pb-5">
+                    <div class="col text-center">
+                        <button type="submit" class="btn btn-secondary btnx-purpule col-5 btn-lg bi bi-icon-2 bi-upload col"></button>
+            </form>
+
+            </div>
+            </div>
+
+        </div>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const form = document.querySelector("form");
+                const mainWordField = document.querySelector('input[name="etymology"]');
+
+                form.addEventListener("submit", function(event) {
+                    if (mainWordField.value.trim() === "" || !/.*[^\s]+.*/.test(mainWordField.value)) {
+                        event.preventDefault(); // フォームの送信を防ぐ
+
+                        // エラーメッセージを表示
+                        const errorMessage = document.getElementById("error-message");
+                        errorMessage.textContent = "単語を入力してください。";
+                        errorMessage.style.display = "block";
+
+                        // ページの一番先頭までスクロール
+                        window.scrollTo(0, 0);
+
+                        // フォームフィールドにフォーカスを移動
+                        mainWordField.focus();
+
+                    }
+                });
+            });
+        </script>
+        <%- include('partials/footer') %>
