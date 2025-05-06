@@ -21,6 +21,16 @@ git clone https://github.com/Nakkinakki55/Ety_book.git
 cd Ety_book
 ```
 
+#### 2.マイグレーションの実行（データベースにテーブルを作成する）
+```txt
+npx sequelize-cli db:migrate
+```
+
+#### 3.アプリの実行
+```txt
+node server.js
+```
+
 ## デプロイ先URL
 本アプリは以下のURLで公開されています。ぜひアクセスして動作を確認してください！
 <br>
