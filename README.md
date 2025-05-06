@@ -37,9 +37,21 @@ cd Ety_book
 ## 使い方
 1. **登録した単語と語源を一覧表示**
 
+![image](https://github.com/user-attachments/assets/abbcfb29-a0a4-45ff-8a13-755c0c3aed14)
+
 2. **登録した単語と語源を詳細表示**
 
-3. **単語と語源を登録**
+![image](https://github.com/user-attachments/assets/8466e7bc-0e42-4776-89ef-7e5ecb79e68a)
 
-4. **単語と語源の検索**
+![image](https://github.com/user-attachments/assets/1b129b23-3704-4823-a6fb-e568a06e70a4)
+
+4. **単語と語源を登録**
+
+![image](https://github.com/user-attachments/assets/cc1cc5f1-7557-40f0-82f7-fd56e190104b)
+
+![image](https://github.com/user-attachments/assets/0e523ff7-ef51-4d28-a927-9f917d81138f)
+
+5. **単語と語源の検索**
+
+![image](https://github.com/user-attachments/assets/5458c6f0-d788-425f-88c1-ae2e0e31f7e6)
 
