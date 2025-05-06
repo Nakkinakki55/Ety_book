@@ -19,6 +19,7 @@ Node.jsとPostgreSQLを使用し、Herokuにデプロイすることで、どこ
 ```txt
 git clone https://github.com/Nakkinakki55/Ety_book.git
 cd Ety_book
+```
 
 ## デプロイ先URL
 本アプリは以下のURLで公開されています。ぜひアクセスして動作を確認してください！
